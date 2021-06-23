@@ -19,7 +19,28 @@ function App() {
   const [modalShow, setModalShow] = React.useState(false);
 
   useEffect(() => {
-    loadData();
+    //loadData();
+
+    setProducts([
+      {
+      _id: "602e0ad0a292184b7c5556c7",
+      price: 30,
+      title: "God of War",
+      imgUrl: "https://images-na.ssl-images-amazon.com/images/I/81qJ1ui8bzL._AC_SL1500_.jpg"
+      },
+      {
+      _id: "602e0adaa292184b7c5556c8",
+      price: 25,
+      title: "Uncharted 4 - A Thief's End",
+      imgUrl: "https://images-na.ssl-images-amazon.com/images/I/519-jJh31XL.jpg"
+      },
+      {
+      _id: "602e0ae0a292184b7c5556c9",
+      price: 40,
+      title: "Horizon Zero Dawn",
+      imgUrl: "https://image.api.playstation.com/vulcan/img/rnd/202011/1018/9erXiwu0ozgKGPIUVTuy2siN.png"
+      }
+      ]);
 
     function onCartChanged() {
       setCount(ds.cartItemCount());
